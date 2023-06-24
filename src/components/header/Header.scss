@@ -97,6 +97,7 @@
         width: 100%;
         padding: 10px 0;
         background: var(--green);
+        z-index: 99;
         @include md {
           display: none;
         }
