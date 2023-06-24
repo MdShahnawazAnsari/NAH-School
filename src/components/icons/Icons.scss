@@ -1,0 +1,58 @@
+@import "../../mixins.scss";
+.icons-container {
+  .heading {
+    margin: 12px 0;
+    font-size: 16px;
+    text-align: center;
+    @include md {
+      font-size: 28px;
+    }
+    h3 {
+      font-family: Futura;
+    }
+    h2 {
+      color: var(--green);
+    }
+  }
+  .icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 28px;
+    .icon {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      cursor: pointer;
+      .bg-image {
+        position: relative;
+        background-image: url(/images/icon-bg.PNG);
+        background-size: cover;
+        background-position: center;
+        width: 60px;
+        height: 60px;
+        @include md {
+          width: 80px;
+          height: 80px;
+        }
+        img {
+          position: absolute;
+          top: 20px;
+          left: 10px;
+          width: 60%;
+          height: 60%;
+        }
+      }
+      p {
+        margin-top: 10px;
+        font-family: FHeavy;
+        font-size: 12px;
+        padding-bottom: 40px;
+        @include md {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}

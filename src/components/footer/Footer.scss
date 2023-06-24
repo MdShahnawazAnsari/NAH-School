@@ -1,0 +1,286 @@
+@import "../../mixins.scss";
+.footer-container {
+  .carousel-section {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px 0 20vh 0;
+
+    @include md {
+      padding: 40px 0 35vh 0;
+    }
+    .heading {
+      display: flex;
+      justify-content: space-between;
+      margin: 10px 0;
+      @include md {
+        margin: 20px 0;
+      }
+      h3 {
+        font-size: 16px;
+        @include md {
+          font-size: 28px;
+        }
+        span {
+          color: var(--green);
+        }
+      }
+      button {
+        background: var(--red);
+        color: var(--white);
+        font-size: 8px;
+        padding: 4px 12px;
+        border: none;
+        font-family: Futura;
+        @include md {
+          padding: 6px 18px;
+          font-size: 12px;
+        }
+        &:hover {
+          background: var(--white);
+          color: var(--red);
+        }
+      }
+    }
+    .carousel {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      @include md {
+        justify-content: space-between;
+      }
+      .item {
+        background: var(--white);
+        padding: 20px;
+        width: 35vw;
+        height: 15vh;
+        @include md {
+          width: 15vw;
+          height: 25vh;
+        }
+        @include lg {
+          height: 20vh;
+        }
+        p {
+          font-size: 8px;
+          @include md {
+            font-size: 16px;
+          }
+        }
+        .icon {
+          margin-top: 6px;
+          display: flex;
+          align-items: center;
+          gap: 8px;
+          color: var(--red);
+          p {
+            font-size: 8px;
+            @include md {
+              font-size: 16px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .footer-section {
+    position: relative;
+    .contact-section {
+      position: absolute;
+      margin: 0 auto;
+      background-image: url("/images/contact-bg.png");
+      background-size: cover;
+      background-position: center;
+      width: 80%;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      padding: 20px 0;
+      flex-direction: column;
+      gap: 20px;
+      right: 10%;
+      top: -20%;
+      @include md {
+        right: 10%;
+        top: -40%;
+        gap: 0;
+        padding: 40px 0;
+        flex-direction: row;
+      }
+      .text {
+        color: var(--white);
+        width: 70%;
+        margin: 0 auto;
+        @include md {
+          margin-left: 5%;
+        }
+        h3 {
+          font-size: 16px;
+          font-family: Futura;
+          @include md {
+            font-size: 32px;
+          }
+          a {
+            font-family: FLt;
+            color: var(--white);
+          }
+        }
+        p {
+          font-size: 8px;
+          @include md {
+            font-size: 16px;
+          }
+        }
+      }
+      form {
+        display: flex;
+        justify-content: center;
+        gap: 12px;
+        align-items: center;
+        flex-direction: column;
+        margin-right: 0;
+        @include md {
+          margin-right: 5%;
+        }
+        .lable {
+          position: relative;
+          span {
+            position: absolute;
+            top: 20%;
+            left: 8%;
+            opacity: 0.5;
+            font-size: 12px;
+            @include md {
+              font-size: 18px;
+            }
+          }
+          input {
+            font-size: 16px;
+            width: 100%;
+            border: none;
+            outline: none;
+            padding: 8px 10px 8px 45px;
+          }
+        }
+        button {
+          width: 100%;
+          padding: 4px 0;
+          border: none;
+          background: var(--red);
+          color: var(--white);
+          @include md {
+            padding: 8px 0;
+          }
+          &:hover {
+            background: var(--white);
+            color: var(--red);
+          }
+        }
+      }
+    }
+
+    .link-section {
+      background: rgba(black, 0.9);
+      background-image: url("/images/footer-bg.png");
+      background-size: cover;
+      background-position: center;
+      padding: 90px 0 20px 0;
+      .links {
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+        flex-wrap: wrap;
+        align-items: center;
+        width: 80%;
+        margin: 0 auto;
+        color: var(--white);
+        .one-section {
+          display: flex;
+          flex-direction: column;
+          h5 {
+            color: var(--light-green);
+            font-size: 12px;
+            margin-bottom: 8px;
+          }
+          a {
+            color: var(--white);
+            opacity: 0.5;
+            font-family: Futura;
+            font-size: 12px;
+            text-decoration: none;
+            margin: 2px 0;
+          }
+        }
+      }
+
+      .icons {
+        width: 80%;
+        display: flex;
+        justify-content: space-around;
+        align-items: end;
+        margin: 22px auto 12px auto;
+        border-top: 1px solid var(--light-green);
+        position: relative;
+        .left {
+          opacity: 0.8;
+          h3 {
+            font-size: 8px;
+            color: var(--white);
+            @include md {
+              font-size: 28px;
+            }
+            &:hover {
+              color: var(--red);
+            }
+          }
+        }
+        .center {
+          // width: 30%;
+          .icons {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            border: none;
+            span {
+              background: var(--gray);
+              display: flex;
+              justify-content: center;
+              align-content: center;
+              padding: 4px;
+              font-size: 16px;
+              border-radius: 49%;
+              color: var(--black);
+            }
+          }
+          p {
+            color: var(--white);
+            font-size: 6px;
+            opacity: 0.8;
+            @include md {
+              font-size: 12px;
+            }
+          }
+        }
+        .right {
+          color: var(--white);
+          font-size: 6px;
+          opacity: 0.8;
+          @include md {
+            font-size: 12px;
+          }
+        }
+        .upward-icon {
+          position: absolute;
+          color: var(--red);
+          transform: rotate(-90deg);
+          font-size: 50px;
+          top: -45%;
+          right: 10%;
+
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,191 @@
+@import "../../mixins.scss";
+.update-container {
+  background: var(--white);
+  padding: 40px 0;
+
+  .carousel-section {
+    .heading {
+      margin: 12px 0;
+      font-size: 16px;
+      text-align: center;
+      @include md {
+        font-size: 24px;
+      }
+      P {
+        font-size: 10px;
+        color: var(--red);
+        font-family: FHeavy;
+        @include md {
+          font-size: 12px;
+        }
+      }
+      h2 {
+        font-family: Futura;
+        span {
+          font-family: FLt;
+          color: var(--green);
+        }
+      }
+    }
+    .carousel-container {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      .item {
+        width: 150px;
+        overflow: hidden;
+        @include md {
+          width: 180px;
+        }
+        img {
+          max-width: 100%;
+          max-height: 100%;
+          object-fit: contain;
+          object-position: center;
+        }
+        .date {
+          color: var(--green);
+          margin: 8px 0;
+          font-size: 8px;
+          @include md {
+            font-size: 10px;
+          }
+        }
+        h3 {
+          font-size: 8px;
+          font-family: FHeavy;
+          @include md {
+            font-size: 12px;
+          }
+        }
+      }
+    }
+  }
+
+  .contact-section {
+    margin: 40px 0;
+    background: var(--gradient);
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+    color: var(--white);
+    padding: 10px 0;
+    gap: 12px;
+    @include md {
+      gap: 28px;
+    }
+    .search {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      .search-icon {
+        background: var(--bg-green);
+        border-radius: 49%;
+        padding: 8px;
+        font-size: 22px;
+      }
+      h3 {
+        font-size: 12px;
+        font-family: Futura;
+        @include md {
+          font-size: 18px;
+        }
+        span {
+          font-size: 16px;
+          font-family: FLt;
+          @include md {
+            font-size: 22px;
+          }
+        }
+      }
+    }
+    .phone {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 8px;
+      @include md {
+        gap: 16px;
+      }
+      .icon {
+        background: var(--bg-green);
+        padding: 4px 8px;
+        display: flex;
+        gap: 8px;
+        font-size: 8px;
+        @include md {
+          font-size: 16px;
+          padding: 6px 12px;
+        }
+      }
+    }
+  }
+
+  .tour-section {
+    display: flex;
+    justify-content: space-around;
+    .tour-container {
+      position: relative;
+      width: 40vw;
+      height: 30vh;
+      @include md {
+        height: 40vh;
+      }
+      .image {
+        width: 100%;
+        height: 100%;
+        filter: brightness(0.7);
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          object-position: center;
+        }
+      }
+      .content {
+        position: absolute;
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+        bottom: 10%;
+        opacity: 0;
+        animation: slideRight 2s ease forwards;
+        .text {
+          padding-left: 10%;
+          color: var(--white);
+          border-left: 4px solid var(--red);
+
+          h2 {
+            font-size: 8px;
+            @include md {
+              font-size: 18px;
+            }
+            span {
+              font-family: FHeavy;
+              font-size: 8px;
+              @include md {
+                font-size: 24px;
+              }
+            }
+          }
+        }
+        .tour-icon {
+          border-radius: 49%;
+          margin-right: 10%;
+          padding: 2px 3px;
+          font-size: 16px;
+          color: var(--white);
+          border: 2px solid var(--white);
+          @include md {
+            padding: 4px 6px;
+            font-size: 32px;
+          }
+        }
+      }
+    }
+  }
+}

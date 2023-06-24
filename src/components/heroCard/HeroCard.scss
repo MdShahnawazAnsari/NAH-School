@@ -1,0 +1,11 @@
+@import "../../mixins.scss";
+.heroCard-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 24px;
+  padding: 26px 0;
+  @include md {
+    padding: 60px 0;
+  }
+}

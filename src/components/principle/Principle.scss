@@ -1,0 +1,132 @@
+@import "../../mixins.scss";
+.principle-container {
+  background-image: url("/images/choseus-bg.png");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 40px 0;
+  justify-content: center;
+  gap: 24px;
+  @include md {
+    justify-content: space-around;
+  }
+
+  .img-container {
+    background: var(--white);
+    width: 70%;
+    @include md {
+      width: 20vw;
+    }
+    img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+      object-position: center;
+    }
+    p {
+      font-family: FHeavy;
+      margin: 10px 0;
+      padding: 0 10px;
+      span {
+        color: var(--green);
+      }
+    }
+    div {
+      padding: 0 10px;
+      font-size: 18px;
+      margin-bottom: 20px;
+      @include md {
+        font-size: 28px;
+      }
+    }
+  }
+  .message-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 40vh;
+    width: 70%;
+    @include md {
+      height: 50vh;
+      width: 25vw;
+    }
+    h3 {
+      font-size: 18px;
+      font-family: Futura;
+      span {
+        font-family: FLt;
+        color: var(--green);
+      }
+      @include md {
+        font-size: 28px;
+      }
+    }
+    p {
+      font-size: 12px;
+      padding-bottom: 40px;
+      border-bottom: 1px solid var(--green);
+      span {
+        color: var(--green);
+      }
+      @include md {
+        font-size: 18px;
+      }
+    }
+  }
+
+  .notice-container {
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 70%;
+    @include md {
+      height: 50vh;
+      width: 40vw;
+    }
+
+    h3 {
+      font-size: 18px;
+      font-family: Futura;
+      span {
+        font-family: FLt;
+        color: var(--green);
+      }
+      @include md {
+        font-size: 28px;
+      }
+    }
+    .scrollable {
+      overflow-y: scroll;
+      height: 70%;
+      .notice {
+        display: flex;
+        width: 90%;
+        gap: 10px;
+        border-bottom: 1px solid var(--green);
+        padding: 12px 0;
+        font-size: 12px;
+        @include md {
+          font-size: 18px;
+        }
+      }
+    }
+  }
+}
+
+.button-container {
+  button {
+    padding: 8px 16px;
+    border: none;
+    background: var(--green);
+    color: var(--white);
+    &:hover {
+      background: var(--white);
+      color: var(--green);
+    }
+    @include md {
+      padding: 12px 24px;
+    }
+  }
+}

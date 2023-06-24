@@ -1,0 +1,145 @@
+@import "../../mixins.scss";
+.choseschool-container {
+  background: var(--white);
+  height: 70vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: static;
+  overflow: hidden;
+  @include md {
+    position: relative;
+    flex-direction: row;
+  }
+
+  .image-container {
+    position: relative;
+    left: 10%;
+    background-image: url("/images/heart-bg.PNG");
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    @include md {
+      width: 40%;
+      height: 90%;
+    }
+    img {
+      position: absolute;
+      top: 15%;
+      left: 15%;
+      width: 70%;
+      height: 70%;
+      z-index: 20;
+      @include md {
+        height: 70%;
+        width: 80%;
+      }
+    }
+    .wall {
+      left: 10%;
+      top: 15%;
+      left: 20%;
+      width: 60%;
+      height: 70%;
+      background: var(--light-green);
+      z-index: 10;
+      position: absolute;
+      @include md {
+        width: 75%;
+        height: 70%;
+      }
+    }
+  }
+
+  .bg-image {
+    background-image: url("/images/choseschool-bg.png");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    @include md {
+      width: 60%;
+    }
+    .content-container {
+      margin-top: 20px;
+      @include md {
+        margin-top: 0;
+      }
+      .sub-heading {
+        color: var(--red);
+        font-size: 8px;
+        font-family: FHeavy;
+        @include md {
+          font-size: 12px;
+        }
+      }
+      .container-1 {
+        display: flex;
+        justify-content: space-between;
+
+        .content {
+          border-bottom: 1px solid var(--green);
+          padding-bottom: 18px;
+          @include md {
+            padding-bottom: 28px;
+          }
+          h3 {
+            font-family: Futura;
+            margin-bottom: 12px;
+            font-size: 18px;
+            @include md {
+              font-size: 28px;
+            }
+          }
+          .item {
+            display: flex;
+            gap: 6px;
+          }
+        }
+      }
+      .container-2 {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .content {
+          border-bottom: 1px solid var(--green);
+          padding: 28px 0;
+          @include md {
+            padding: 28px 0;
+          }
+          h3 {
+            font-size: 18px;
+            font-family: Futura;
+            @include md {
+              font-size: 28px;
+            }
+          }
+        }
+      }
+      .container-3 {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+        .content {
+          padding: 18px 0;
+          @include md {
+            padding: 28px 0;
+          }
+          h3 {
+            font-size: 18px;
+            font-family: Futura;
+            @include md {
+              font-size: 28px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

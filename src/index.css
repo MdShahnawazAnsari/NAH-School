@@ -1,0 +1,137 @@
+:root {
+  --black: #1e201d;
+  --white: #fefefe;
+  --red: #ee3d0d;
+  --green: #016726;
+  --light-green: #bedb67;
+  --bg-green: #328819;
+  --gray: #ebe9f0;
+  --yellow: #f4b81b;
+  --skin: #f7d192;
+  --gradient: linear-gradient(to right, #086b23, #17711f, #779f01);
+}
+
+@font-face {
+  font-family: Futura;
+  src: url(/font/Futura\ Light.otf);
+}
+
+@font-face {
+  font-family: FCondensed;
+  src: url(/font/FuturaLT-Condensed.ttf);
+}
+@font-face {
+  font-family: FEBold;
+  src: url(/font/FuturaLT-ExtraBold.ttf);
+}
+@font-face {
+  font-family: FHeavy;
+  src: url(/font/FuturaLT-Heavy.ttf);
+}
+@font-face {
+  font-family: FLight;
+  src: url(/font/FuturaLT-Light.ttf);
+}
+@font-face {
+  font-family: FOblique;
+  src: url(/font/FuturaLT-Oblique.ttf);
+}
+@font-face {
+  font-family: FLt;
+  src: url(/font/FuturaLT.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+  scrollbar-width: none; /* Firefox */
+  font-size: 16px;
+  background: var(--gray);
+  color: var(--black);
+  font-family: FLt, "sans-serif";
+}
+
+/* Animations */
+@keyframes slideRight {
+  0% {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes slideLeft {
+  0% {
+    transform: translateX(100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes slideTop {
+  0% {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes slideBottom {
+  0% {
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes zoomIn {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+@keyframes floatImage {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-24px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes introSlideTop {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100%);
+    opacity: 1;
+  }
+}
